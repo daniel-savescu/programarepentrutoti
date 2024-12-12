@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'JetBrainsMono-Regular'; /* Name your font family */
-    src: url('/fonts/JetBrainsMono-Regular.ttf'); /* Locate the .ttf file within your directory */
+    src: url('https://daniel-savescu.github.io/ProgramarePentruToti/fonts/JetBrains-Regular.tft'); /* Locate the .ttf file within your directory */
 }
 
 @font-face {
