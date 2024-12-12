@@ -1,0 +1,51 @@
+/* Fonts */
+
+@font-face {
+    font-family: 'JetBrainsMono-Regular'; /* Name your font family */
+    src: url('/fonts/JetBrainsMono-Regular.ttf'); /* Locate the .ttf file within your directory */
+}
+
+@font-face {
+    font-family: 'JetBrainsMono-Bold'; /* Name your font family */
+    src: url('/fonts/JetBrainsMono-Bold.ttf'); /* Locate the .ttf file within your directory */
+}
+
+@font-face {
+    font-family: 'JetBrainsMono-Italic'; /* Name your font family */
+    src: url('/fonts/JetBrainsMono-Italic.ttf'); /* Locate the .ttf file within your directory */
+}
+
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'JetBrainsMono-Regular';
+    margin: 0;
+    padding: 0;
+    background-color: #fdfcfc;
+    height: 100vh; /* Full viewport height */
+}
+
+h1 {
+    font-family: 'JetBrainsMono-Bold';
+    padding-top: 1rem;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul li {
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+
