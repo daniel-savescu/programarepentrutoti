@@ -10,3 +10,5 @@ care te vor ajuta să înțelegi și să aplici cele mai noi tehnologii.</p>
 ![demo2](https://github.com/user-attachments/assets/0efd0621-d5dc-4472-92dd-3dd69393790a)
 
 ![demo3](https://github.com/user-attachments/assets/d30b94a7-db4e-49d8-a61d-c6417f1d898b)
+
+
