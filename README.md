@@ -4,7 +4,7 @@
 care te vor ajuta să înțelegi și să aplici cele mai noi tehnologii.</p>
 <hr>
 <p><strong>Preview:</strong></p>
-<hr>
+
 ![demo1](https://github.com/user-attachments/assets/d1d974a6-8073-4b2d-b059-32143c7daaaf)
 
 ![demo2](https://github.com/user-attachments/assets/0efd0621-d5dc-4472-92dd-3dd69393790a)
