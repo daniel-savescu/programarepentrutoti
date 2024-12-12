@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: 'JetBrainsMono-Regular'; /* Name your font family */
-    src: url('fonts/JetBrains-Regular.tft'); /* Locate the .ttf file within your directory */
+    src: url('../fonts/JetBrainsMono-Regular.ttf'); /* Locate the .ttf file within your directory */
 }
 
 @font-face {
     font-family: 'JetBrainsMono-Bold'; /* Name your font family */
-    src: url('fonts/JetBrainsMono-Bold.ttf'); /* Locate the .ttf file within your directory */
+    src: url('../fonts/JetBrainsMono-Bold.ttf'); /* Locate the .ttf file within your directory */
 }
 
 @font-face {
     font-family: 'JetBrainsMono-Italic'; /* Name your font family */
-    src: url('fonts/JetBrainsMono-Italic.ttf'); /* Locate the .ttf file within your directory */
+    src: url('../fonts/JetBrainsMono-Italic.ttf'); /* Locate the .ttf file within your directory */
 }
 
 html {
