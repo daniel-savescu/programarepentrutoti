@@ -1,154 +1,232 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programare Pentru Toți</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Highlight.js CSS pentru evidențierea sintaxei -->
-    <link href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item mb-0">
-                <a class="nav-link active" aria-current="page" href="../index.html">Acasă</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Listă Tutoriale
-                </a>
-                <ul class="dropdown-menu">
-                <li><p class="dropdown-item fw-bold">Tutoriale Front-end</p></li>
-                  <li><a class="dropdown-item" href="../html/html_index.html">HTML5</a></li>
-                  
-                </ul>
-              </li>
-            </ul>
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mb-0">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Acasă</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                HTML5
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="introducere_in_html.html"
+                    >Introducere în HTML5</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="anatomia_tagurilor.html"
+                    >Anatomia Tag-urilor HTML</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="html_index.html"
+                    >Toate Tutorialele HTML</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Caută tutoriale..."
+            />
+          </div>
+
+          <div class="dark-mode-toggle">
+            <label for="darkModeToggle">Dark Mode</label>
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" />
+              <span class="slider round"></span>
+            </label>
           </div>
         </div>
-      </nav>
-    <div class="container pb-3">
-        <h1 class="mt-3">Elementul ABBR din HTML5</h1>
-        <hr>
-        <p>Elementul <strong>&lt;abbr&gt;</strong> din HTML5 este folosit pentru a indica o abreviere sau un acronim. Este util pentru a 
-            oferi informații suplimentare despre o abreviere, cum ar fi semnificația completă, prin intermediul 
-            atributului <strong>title</strong>. Când utilizatorii trec cu cursorul peste abrevierea marcată cu <strong>&lt;abbr&gt;</strong>, 
-            majoritatea browserelor afișează valoarea atributului <strong>title</strong> ca un tooltip.</p>
-        <h5 class="fw-bold">Sintaxa</h5>
-        
-            <div class="card shadow-sm mt-3 mb-3">
-                <div class="card-header bg-dark text-white">
-                    <strong>Cod HTML5</strong>
-                </div>
-    <div class="card-body bg-light">
-<pre>
-<code>
-&lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Elementul `&lt;abbr&gt;` din HTML5</h1>
+      <p>
+        Elementul `&lt;abbr&gt;` din HTML5 este folosit pentru a indica o
+        abreviere sau un acronim. Prin utilizarea acestui element, poți oferi o
+        descriere completă a termenului, care va apărea ca un "tooltip" (o bulă
+        de ajutor) atunci când utilizatorul trece cu mouse-ul peste abreviere.
+      </p>
+
+      <h2>Sintaxă și Atributul `title`</h2>
+      <p>Sintaxa de bază este simplă, iar atributul cheie este `title`:</p>
+      <div class="card shadow-sm mt-3 mb-3">
+        <div class="card-header bg-dark text-white">
+          <strong>Cod HTML5</strong>
+        </div>
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-html">
+&lt;abbr title="Organizația Națiunilor Unite"&gt;ONU&lt;/abbr&gt;
 </code>
 </pre>
-    </div>
-           </div>
-        
-    <h5 class="fw-bold">Explicație:</h5>
-    <ol>
-        <li>
-            <strong>Abreviere simplă cu tooltip:</strong>
-            
-                <div class="card shadow-sm mt-3 mb-3">
-                    <div class="card-header bg-dark text-white">
-                        <strong>Cod HTML5</strong>
-                    </div>
-        <div class="card-body bg-light">
-    <pre>
-    <code>
-    Învață să scrii cod în &lt;abbr title="Hypertext Markup Language"&gt;HTML&lt;/abbr&gt;.
-    </code>
-    </pre>
         </div>
-               </div>
-            
-        
-        <p>Aici, utilizatorii vor vedea textul „Hypertext Markup Language” atunci când trec cu mouse-ul peste „HTML”.</p>
-        </li>
-        <li>
-            <strong>Acronim pentru organizație:</strong>
-            
-                <div class="card shadow-sm mt-3 mb-3">
-                    <div class="card-header bg-dark text-white">
-                        <strong>Cod HTML5</strong>
-                    </div>
-        <div class="card-body bg-light">
-    <pre>
-    <code>
-    Suntem membri ai &lt;abbr title="World Health Organization"&gt;WHO&lt;/abbr&gt;.
-    </code>
-    </pre>
-        </div>
-               </div>
-            
-        </li>
-    
-    <li>
-        Fără atribut <strong>title</strong>: Dacă <strong>&lt;abbr&gt;</strong> este folosit fără atributul <strong>title</strong>, 
-            este doar un indicator semantic, fără funcționalitate adițională:
-                
-                <div class="card shadow-sm mt-3 mb-3">
-                    <div class="card-header bg-dark text-white">
-                        <strong>Cod HTML5</strong>
-                    </div>
-        <div class="card-body bg-light">
-    <pre>
-    <code>
-    &lt;abbr&gt;NASA&lt;/abbr&gt; a lansat o nouă misiune.
-    </code>
-    </pre>
-        </div>
-               </div>
-            
-    </li>
-</ol>
-<h5 class="fw-bold">Utilizări practice:</h5>
-    <ul>
-        <li class="pt-3">Crește <strong>accesibilitatea</strong> și claritatea conținutului.</li>
-        <li>Ajută utilizatorii care nu cunosc semnificația unei abrevieri.</li>
-        <li>Este util pentru optimizarea SEO, oferind motoarelor de căutare mai multe detalii despre conținut.</li>
-    </ul>
-<h5 class="fw-bold">Stilizare:</h5>
-<p class="pt-3">Fiind un element inline, poate fi stilizat cu CSS:</p>
+      </div>
 
-    <div class="card shadow-sm mt-3 mb-3">
+      <h5 class="fw-bold">Explicație:</h5>
+      <ul>
+        <li class="pt-3">
+          <strong>`&lt;abbr&gt;`</strong>: Tag-ul de deschidere și închidere
+          care înconjoară abrevierea.
+        </li>
+        <li>
+          <strong>`title="Organizația Națiunilor Unite"`</strong>: Atributul
+          `title` conține textul complet al abrevierii sau acronimului. Acesta
+          este textul care va fi afișat în tooltip.
+        </li>
+        <li><strong>`ONU`</strong>: Abrevierea vizibilă în document.</li>
+      </ul>
+      <hr />
+
+      <h2>Exemple de Utilizare</h2>
+      <ol>
+        <li>
+          <h5 class="fw-bold">Abreviere simplă</h5>
+          <div class="card shadow-sm mt-3 mb-3">
+            <div class="card-header bg-dark text-white">
+              <strong>Cod HTML5</strong>
+            </div>
+            <div class="card-body bg-light">
+              <pre>
+<code class="language-html">
+Învață să codezi cu &lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt; și &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;.
+</code>
+</pre>
+            </div>
+          </div>
+        </li>
+        <li>
+          <h5 class="fw-bold">Utilizarea cu un acronim</h5>
+          <div class="card shadow-sm mt-3 mb-3">
+            <div class="card-header bg-dark text-white">
+              <strong>Cod HTML5</strong>
+            </div>
+            <div class="card-body bg-light">
+              <pre>
+<code class="language-html">
+&lt;abbr title="National Aeronautics and Space Administration"&gt;NASA&lt;/abbr&gt; a lansat o nouă misiune.
+</code>
+</pre>
+            </div>
+          </div>
+        </li>
+      </ol>
+      <h5 class="fw-bold">Utilizări practice:</h5>
+      <ul>
+        <li class="pt-3">
+          Crește <strong>accesibilitatea</strong> și claritatea conținutului.
+        </li>
+        <li>Ajută utilizatorii care nu cunosc semnificația unei abrevieri.</li>
+        <li>
+          Este util pentru optimizarea SEO, oferind motoarelor de căutare mai
+          multe detalii despre conținut.
+        </li>
+      </ul>
+      <h5 class="fw-bold">Stilizare:</h5>
+      <p class="pt-3">
+        Fiind un element inline, poate fi stilizat cu CSS. Un stil comun este
+        cel de a adăuga o linie punctată sub abreviere și un cursor de ajutor:
+      </p>
+
+      <div class="card shadow-sm mt-3 mb-3">
         <div class="card-header bg-dark text-white">
-            <strong>Cod CSS3</strong>
+          <strong>Cod CSS3</strong>
         </div>
-<div class="card-body bg-light">
-<pre>
-<code>
-abbr{
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-css">
+abbr {
     text-decoration: dotted underline;
     cursor: help;
 }
 </code>
 </pre>
-</div>
-   </div>
+        </div>
+      </div>
 
-<p class="pt-3">Acest element îmbunătățește atât semantica, cât și accesibilitatea paginilor web.</p>
-</div>
+      <p class="pt-3">
+        Acest element îmbunătățește atât semantica, cât și accesibilitatea
+        paginilor web.
+      </p>
+    </div>
 
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Highlight.js JS pentru evidențierea sintaxei -->
-    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/lib/core.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/lib/languages/xml.min.js"></script>
-    </body>
-    </html> 
-    
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script>
+      // Dark Mode Functionality
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        darkModeToggle.checked = true;
+      }
+
+      darkModeToggle.addEventListener("change", () => {
+        if (darkModeToggle.checked) {
+          body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        } else {
+          body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // Placeholder for search input on individual tutorial pages
+      document
+        .getElementById("searchInput")
+        .addEventListener("keyup", function () {
+          // No action needed here, as search filtering is for html_index.html
+        });
+    </script>
+  </body>
+</html>

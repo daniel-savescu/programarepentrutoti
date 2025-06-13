@@ -1,80 +1,238 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programare Pentru Toți</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item mb-0">
-                <a class="nav-link active" aria-current="page" href="index.html">Acasă</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Listă Tutoriale
-                </a>
-                <ul class="dropdown-menu">
-                  <li><p class="dropdown-item fw-bold">Tutoriale Front-end</p></li>
-                  <li><a class="dropdown-item" href="html/html_index.html">HTML5</a></li>
-                </ul>
-              </li>
-            </ul>
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mb-0">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Acasă</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                HTML5
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="html/introducere_in_html.html"
+                    >Introducere în HTML5</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="html/anatomia_tagurilor.html"
+                    >Anatomia Tag-urilor HTML</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="html/html_index.html"
+                    >Toate Tutorialele HTML</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Caută tutoriale..."
+            />
+          </div>
+
+          <div class="dark-mode-toggle">
+            <label for="darkModeToggle">Dark Mode</label>
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" />
+              <span class="slider round"></span>
+            </label>
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
+
     <div class="container">
-        <h1 class="text-center">Programare pentru toți</h1>
-        <hr>
-        <h2>Website-ul nostru de tutoriale gratuite despre programarea web</h2> 
-        <p>Îți oferim resurse complete și gratuite pentru a învăța programarea web, atât pe partea de front-end cât și back-end. 
-            Indiferent dacă ești un începător sau un dezvoltator cu experiență, vei găsi tutoriale detaliate, exemple de cod și ghiduri pas cu pas 
-            care te vor ajuta să înțelegi și să aplici cele mai noi tehnologii.</p>
-        <p><strong>Tehnologii Front-End</strong>: Pe partea de front-end, website-ul nostru include tutoriale despre următoarele tehnologii moderne:</p>
-            <ul>
-                <li><strong><a href="html/html_index.html">HTML5</a></strong>: Structurarea paginilor web folosind cele mai recente standarde.</li>
-                <li><strong>CSS3</strong>: Design responsiv și animații avansate pentru interfețe elegante.</li>
-                <li><strong>JavaScript</strong>: Limbajul de programare care face ca paginile web să fie interactive.</li>
-                <li><strong>React</strong>: Biblioteca JavaScript pentru construirea interfețelor de utilizator rapide și dinamice.</li>
-                <li><strong>Vue.js</strong>: Un framework JavaScript progresiv pentru dezvoltarea de aplicații web.</li>
-                <li><strong>Angular</strong>: Un framework complet pentru dezvoltarea aplicațiilor de la Google.</li>
-                <li><strong>Sass</strong>: Un preprocesor CSS care îmbunătățește designul și structura fișierelor CSS.</li>
-                <li><strong>Bootstrap</strong>: Un framework CSS pentru design responsive și componente predefinite.</li>
-                <li><strong>Tailwind CSS</strong>: Un framework CSS bazat pe utilitare care permite personalizarea rapidă a designului.</li>
-        </ul>
-        <p><strong>Tehnologii Back-End</strong>: În ceea ce privește dezvoltarea back-end, oferim tutoriale despre cele mai populare 
-            tehnologii utilizate pentru crearea serverelor și a bazelor de date:</p>
-            <ul>
-                <li><strong>Node.js</strong>: Platforma JavaScript pentru construirea de aplicații server-side rapide și scalabile.</li>
-                <li><strong>Express.js</strong>: Framework de backend pentru Node.js, utilizat pentru construirea de aplicații web ușor de scalat.</li>
-                <li><strong>Python cu Django și Flask</strong>: Frameworkuri pentru dezvoltarea de aplicații web robuste și scalabile.</li>
-                <li><strong>PHP cu Laravel</strong>: Framework popular pentru construirea de aplicații web și API-uri.</li>
-                <li><strong>Ruby on Rails</strong>: Framework web pentru Ruby, ce permite dezvoltarea rapidă a aplicațiilor.</li>
-                <li><strong>Java cu Spring Boot</strong>: Framework de dezvoltare de aplicații enterprise.</li>
-                <li><strong>Go</strong>: Limbaj de programare pentru construirea de aplicații web eficiente și rapide.</li>
-                <li><strong>MySQL și PostgreSQL</strong>: Sisteme de gestionare a bazelor de date relaționale utilizate pe scară largă.</li>
-                <li><strong>MongoDB</strong>:  O bază de date NoSQL, ideală pentru aplicații care necesită flexibilitate în gestionarea datelor.</li>
-            </ul>
-        <p><strong>Alte tehnologii utile</strong>:</p>
-            <ul>
-                <li><strong>GraphQL</strong>: Un limbaj de interogare pentru API-uri care permite utilizatorilor să solicite exact datele de care au nevoie.</li>
-                <li><strong>Docker</strong>:  Platformă pentru construirea, distribuirea și rularea aplicațiilor în containere, facilitând gestionarea acestora pe diferite medii.</li>
-                <li><strong>Kubernetes</strong>:  Sistem de orchestration al containerelor, esențial pentru dezvoltarea de aplicații scalabile și distribuite.</li>
-            </ul>
-        <p>Începe acum să înveți și să îți construiești propriile aplicații web, utilizând cele mai recente tehnologii!</p>
-        <footer>
-            <p class="copy">Creat de om, generat de AI</p>
-        </footer>
+      <h1>Bun venit pe Programare Pentru Toți!</h1>
+      <p class="lead">
+        Platforma ta pentru a învăța programare web de la zero. Aici vei găsi
+        tutoriale clare și practice pentru a stăpâni cele mai populare
+        tehnologii web.
+      </p>
+
+      <h2>De ce să înveți programare web?</h2>
+      <p>
+        Programarea web este o abilitate esențială în lumea digitală de astăzi,
+        oferind oportunități nelimitate de creare și inovație. Fie că vrei să
+        construiești un site personal, o aplicație complexă sau să te lansezi
+        într-o carieră în IT, acest domeniu îți deschide porți către o
+        multitudine de posibilități.
+      </p>
+
+      <h2>Ce vei învăța?</h2>
+      <p>
+        Vei descoperi conceptele fundamentale și avansate ale dezvoltării web,
+        structurate în tutoriale ușor de înțeles:
+      </p>
+      <ul>
+        <li>
+          <strong>HTML5</strong>: Structura de bază a fiecărei pagini web.
+        </li>
+        <li>
+          <strong>CSS3</strong>: Stilizarea și designul vizual al site-urilor.
+        </li>
+        <li>
+          <strong>JavaScript</strong>: Interactivitatea și funcționalitatea
+          dinamică.
+        </li>
+      </ul>
+
+      <p>
+        Pe lângă aceste limbaje fundamentale, vom explora și alte tehnologii
+        esențiale care completează un set de competențe de dezvoltator web
+        modern:
+      </p>
+
+      <h3>Tehnologii Frontend</h3>
+      <ul>
+        <li>
+          <strong>React</strong>: O bibliotecă JavaScript populară pentru
+          construirea de interfețe utilizator interactive.
+        </li>
+        <li>
+          <strong>Angular</strong>: Un framework robust pentru aplicații web
+          complexe.
+        </li>
+        <li>
+          <strong>Vue.js</strong>: Un framework progresiv, ușor de integrat și
+          de învățat.
+        </li>
+      </ul>
+
+      <h3>Tehnologii Backend</h3>
+      <ul>
+        <li>
+          <strong>Node.js</strong>: Platformă JavaScript pentru dezvoltarea de
+          servere și aplicații backend.
+        </li>
+        <li>
+          <strong>Python (cu Django/Flask)</strong>: Versatil și puternic pentru
+          dezvoltarea web.
+        </li>
+        <li>
+          <strong>PHP (cu Laravel/Symfony)</strong>: Un limbaj tradițional, încă
+          foarte utilizat pentru aplicații web.
+        </li>
+        <li>
+          <strong>Ruby (cu Ruby on Rails)</strong>: Cunoscut pentru eficiența sa
+          în dezvoltarea rapidă.
+        </li>
+        <li>
+          <strong>Go</strong>: Limbaj de programare pentru construirea de
+          aplicații web eficiente și rapide.
+        </li>
+        <li>
+          <strong>MySQL și PostgreSQL</strong>: Sisteme de gestionare a bazelor
+          de date relaționale utilizate pe scară largă.
+        </li>
+        <li>
+          <strong>MongoDB</strong>: O bază de date NoSQL, ideală pentru
+          aplicații care necesită flexibilitate în gestionarea datelor.
+        </li>
+      </ul>
+      <p><strong>Alte tehnologii utile</strong>:</p>
+      <ul>
+        <li>
+          <strong>GraphQL</strong>: Un limbaj de interogare pentru API-uri care
+          permite utilizatorilor să solicite exact datele de care au nevoie.
+        </li>
+        <li>
+          <strong>Docker</strong>: Platformă pentru construirea, distribuirea și
+          rularea aplicațiilor în containere, facilitând gestionarea acestora pe
+          diferite medii.
+        </li>
+        <li>
+          <strong>Kubernetes</strong>: Sistem de orchestration al containerelor,
+          esențial pentru dezvoltarea de aplicații scalabile și distribuite.
+        </li>
+      </ul>
+      <p>
+        Începe acum să înveți și să îți construiești propriile aplicații web,
+        utilizând cele mai recente tehnologii!
+      </p>
     </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>  
-</body>
+    <footer>
+      <p class="copy">Creat de om, generat de AI</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Dark Mode Functionality
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      // Check for saved theme preference
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        darkModeToggle.checked = true;
+      }
+
+      darkModeToggle.addEventListener("change", () => {
+        if (darkModeToggle.checked) {
+          body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        } else {
+          body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // Basic search functionality (placeholder for index.html, full functionality in html_index.html)
+      document
+        .getElementById("searchInput")
+        .addEventListener("keyup", function () {
+          if (window.location.pathname.includes("html_index.html")) {
+            // Do nothing here, actual search logic is in html_index.html
+          } else {
+            // Optional: show a message if search is attempted on index.html
+            // alert('Funcționalitatea de căutare este disponibilă pe paginile de tutoriale (ex: HTML5).');
+          }
+        });
+    </script>
+  </body>
 </html>

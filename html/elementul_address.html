@@ -1,100 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programare Pentru Toți</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Highlight.js CSS pentru evidențierea sintaxei -->
-    <link href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item mb-0">
-                <a class="nav-link active" aria-current="page" href="../index.html">Acasă</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Listă Tutoriale
-                </a>
-                <ul class="dropdown-menu">
-                <li><p class="dropdown-item fw-bold">Tutoriale Front-end</p></li>
-                  <li><a class="dropdown-item" href="../html/html_index.html">HTML5</a></li>
-                  
-                </ul>
-              </li>
-            </ul>
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mb-0">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Acasă</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                HTML5
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="introducere_in_html.html"
+                    >Introducere în HTML5</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="anatomia_tagurilor.html"
+                    >Anatomia Tag-urilor HTML</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="html_index.html"
+                    >Toate Tutorialele HTML</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Caută tutoriale..."
+            />
+          </div>
+
+          <div class="dark-mode-toggle">
+            <label for="darkModeToggle">Dark Mode</label>
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" />
+              <span class="slider round"></span>
+            </label>
           </div>
         </div>
-      </nav>
-    <div class="container pb-3">
-        <h1 class="mt-3">Elementul ADDRESS din HTML5</h1>
-        <hr>
-        <p>Elementul <strong>&lt;address&gt;</strong> din HTML5 este utilizat pentru a oferi informații de contact legate de autorul sau 
-            proprietarul unui document, articole, pagini web sau secțiuni ale acestora. Este un element semantic care ajută la îmbunătățirea structurii și accesibilității conținutului.</p>
-        <h5 class="fw-bold">Caracteristici principale:</h5>
-        <ul>
-            <li class="pt-3"><strong>Semnificație semantică</strong>: Indică informații despre contact, cum ar fi: nume, adrese de e-mail, 
-                adrese poștale, numere de telefon etc.</li>
-            <li><strong>Context de utilizare</strong>: Este de obicei folosit pentru a marca 
-                detalii de contact asociate întregului document sau unei secțiuni specifice.</li>
-            <li><strong>Stilizare implicită</strong>: Browserele aplică de obicei stiluri implicite, cum ar fi text cursiv (italic), 
-                dar acest lucru poate fi modificat prin CSS.</li>
-        </ul>
-        <h5 class="fw-bold">Regulile de utilizare:</h5>
-        <ol>
-            <li class="pt-3">
-                <strong>Plasare</strong>:
-                <ul>
-                    <li class="pt-3">Poate fi folosit în orice secțiune HTML.</li>
-                    <li>Este recomandat să fie utilizat doar pentru informații legate de contact.</li>
-                </ul>
-            </li>
-            <li>
-                <strong>Continutul acceptat</strong>:
-                <ul>
-                    <li class="pt-3">Poate conține text liber, hyperlink-uri, alte elemente inline.</li>
-                    <li>Nu trebuie folosit pentru informații care nu sunt de contact (de exemplu, locația geografică a unui eveniment).</li>
-                </ul>
-            </li>
-        </ol>
-        <h5 class="fw-bold">Exemple:</h5>
-        <p class="fw-bold pt-3">Informații de contact pentru întreg documentul:</p>
+      </div>
+    </nav>
 
-    <div class="card shadow-sm mt-3 mb-3">
+    <div class="container">
+      <h1>Elementul `&lt;address&gt;` din HTML5</h1>
+      <p>
+        Elementul `&lt;address&gt;` din HTML5 este utilizat pentru a oferi
+        informații de contact pentru autorul/proprietarul unui document HTML sau
+        al unei secțiuni specifice din cadrul acestuia. Aceste informații pot
+        include nume, adrese fizice, adrese de e-mail, numere de telefon,
+        link-uri către rețele sociale, etc.
+      </p>
+
+      <h2>Sintaxă și Utilizare</h2>
+      <p>Sintaxa de bază este simplă:</p>
+      <div class="card shadow-sm mt-3 mb-3">
         <div class="card-header bg-dark text-white">
-            <strong>Cod HTML5</strong>
+          <strong>Cod HTML5</strong>
         </div>
-            <div class="card-body bg-light">
-<pre>
-<code>
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-html">
+&lt;address&gt;
+    Scris de: &lt;a href="mailto:nume@example.com"&gt;Nume Autor&lt;/a&gt;.&lt;br&gt;
+    Vizitează-ne la: Str. Exemplu, Nr. 10, Oraș, Țară.&lt;br&gt;
+    Telefon: &lt;a href="tel:+40123456789"&gt;+40 123 456 789&lt;/a&gt;.
+&lt;/address&gt;
+</code>
+</pre>
+        </div>
+      </div>
+
+      <h5 class="fw-bold">Utilizare tipică:</h5>
+      <ul>
+        <li class="pt-3">
+          <strong>În footer-ul paginii:</strong> Pentru informațiile de contact
+          generale ale site-ului.
+        </li>
+        <li>
+          <strong
+            >În interiorul unui `&lt;article&gt;` sau `&lt;section&gt;`:</strong
+          >
+          Pentru a specifica autorul sau informațiile de contact relevante
+          pentru acea secțiune de conținut.
+        </li>
+      </ul>
+      <hr />
+
+      <h2>Exemple de Utilizare</h2>
+      <h5 class="fw-bold">Informații de contact în footer:</h5>
+      <div class="card shadow-sm mt-3 mb-3">
+        <div class="card-header bg-dark text-white">
+          <strong>Cod HTML5</strong>
+        </div>
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-html">
 &lt;footer&gt;
-    &lt;address&gt;
-        Contactați-ne la: &lt;a href="mailto:support@example.com"&gt;support@example.com&lt;/a&gt;&lt;br&gt;
-        Telefon: +123 456 7890&lt;br&gt;
+    &lt;p&gt;Copyright &copy; 2024 Programare Pentru Toți&lt;/p&gt;
+        &lt;address&gt;
+        Contact: &lt;a href="mailto:info@example.com"&gt;info@example.com&lt;/a&gt;&lt;br&gt;
+        Telefon: +40 123 456 7890&lt;br&gt;
         Adresa: Str. Exemplu, Nr. 10, Oraș, Țară
         &lt;/address&gt;
 &lt;/footer&gt;
 </code>
 </pre>
-            </div>
-    </div>
-<p class="fw-bold">Informații pentru un articol:</p> 
-<div class="card shadow-sm mt-3 mb-3">
-    <div class="card-header bg-dark text-white">
-        <strong>Cod HTML5</strong>
-    </div>
+        </div>
+      </div>
+      <h5 class="fw-bold">Informații pentru un articol:</h5>
+      <div class="card shadow-sm mt-3 mb-3">
+        <div class="card-header bg-dark text-white">
+          <strong>Cod HTML5</strong>
+        </div>
         <div class="card-body bg-light">
-<pre>
-<code>
+          <pre>
+<code class="language-html">
 &lt;article&gt;
     &lt;h2&gt;Articol despre HTML5&lt;/h2&gt;
         &lt;p&gt;Conținutul articolului...&lt;/p&gt;
@@ -105,19 +168,56 @@
 </code>
 </pre>
         </div>
-</div>
-<h5 class="fw-bold">Note:</h5>
-<ul>
-    <li class="pt-3">Nu trebuie utilizat pentru a furniza adrese geografice care nu sunt asociate cu informațiile de contact.</li>
-    <li>Este un element semantic care îmbunătățește accesibilitatea, permițând cititoarelor de ecran să identifice ușor informațiile de contact</li>
-</ul>
+      </div>
+      <h5 class="fw-bold">Note:</h5>
+      <ul>
+        <li class="pt-3">
+          Nu trebuie utilizat pentru a furniza adrese geografice care nu sunt
+          asociate cu informațiile de contact.
+        </li>
+        <li>
+          Este un element semantic care îmbunătățește accesibilitatea, permițând
+          cititoarelor de ecran să identifice ușor informațiile de contact.
+        </li>
+        <li>
+          În mod implicit, conținutul din `&lt;address&gt;` este afișat în stil
+          italic de către majoritatea browserelor.
+        </li>
+      </ul>
     </div>
 
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Highlight.js JS pentru evidențierea sintaxei -->
-    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/lib/core.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/lib/languages/xml.min.js"></script>
-    </body>
-    </html> 
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script>
+      // Dark Mode Functionality
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        darkModeToggle.checked = true;
+      }
+
+      darkModeToggle.addEventListener("change", () => {
+        if (darkModeToggle.checked) {
+          body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        } else {
+          body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // Placeholder for search input on individual tutorial pages
+      document
+        .getElementById("searchInput")
+        .addEventListener("keyup", function () {
+          // No action needed here, as search filtering is for html_index.html
+        });
+    </script>
+  </body>
+</html>

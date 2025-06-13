@@ -1,47 +1,376 @@
 /* Fonts */
-
 @font-face {
-    font-family: 'JetBrainsMono-Regular'; /* Name your font family */
-    src: url('../fonts/JetBrainsMono-Regular.ttf'); /* Locate the .ttf file within your directory */
+  font-family: "JetBrainsMono-Regular";
+  src: url("../fonts/JetBrainsMono-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'JetBrainsMono-Bold'; /* Name your font family */
-    src: url('../fonts/JetBrainsMono-Bold.ttf'); /* Locate the .ttf file within your directory */
+  font-family: "JetBrainsMono-Bold";
+  src: url("../fonts/JetBrainsMono-Bold.ttf");
 }
 
 @font-face {
-    font-family: 'JetBrainsMono-Italic'; /* Name your font family */
-    src: url('../fonts/JetBrainsMono-Italic.ttf'); /* Locate the .ttf file within your directory */
+  font-family: "JetBrainsMono-Italic";
+  src: url("../fonts/JetBrainsMono-Italic.ttf");
 }
 
-html {
-    margin: 0;
-    padding: 0;
+:root {
+  /* Light Mode Colors */
+  --primary-color: #007bff; /* Albastru pentru accente */
+  --secondary-color: #6c757d; /* Gri pentru text secundar */
+  --background-light: #f8f9fa; /* Fundal foarte deschis */
+  --background-dark: #343a40; /* Fundal închis pentru headere de cod și navbar */
+  --text-color: #333; /* Culoare principală text */
+  --border-color: #dee2e6; /* Culoare borduri */
+  --card-bg: #ffffff; /* Fundal pentru carduri */
+  --code-bg: #e9ecef; /* Fundal pentru blocuri de cod */
+  --code-text: #000000; /* Culoare text cod */
+  --dropdown-bg: #ffffff;
+  --dropdown-text: #212529;
+  --dropdown-hover-bg: #e9ecef;
+  --dropdown-hover-text: #16181b;
+}
+
+body.dark-mode {
+  /* Dark Mode Colors */
+  --primary-color: #66b3ff; /* Albastru mai deschis pentru accente */
+  --secondary-color: #adb5bd; /* Gri mai deschis pentru text secundar */
+  --background-light: #212529; /* Fundal închis */
+  --background-dark: #343a40; /* Rămâne la fel sau o nuanță mai închisă dacă doriți */
+  --text-color: #e2e6ea; /* Text deschis */
+  --border-color: #495057; /* Borduri mai închise */
+  --card-bg: #2d3436; /* Fundal mai închis pentru carduri */
+  --code-bg: #263238; /* Fundal mai închis pentru blocuri de cod */
+  --code-text: #ffffff; /* Culoare text cod alb */
+  --dropdown-bg: #343a40;
+  --dropdown-text: #f8f9fa;
+  --dropdown-hover-bg: #495057;
+  --dropdown-hover-text: #ffffff;
 }
 
 body {
-    font-family: 'JetBrainsMono-Regular';
-    margin: 0;
-    padding: 0;
-    background-color: #fdfcfc;
-    height: 100vh; /* Full viewport height */
+  font-family: "JetBrainsMono-Regular", monospace; /* Adăugăm monospace ca fallback */
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-light);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Tranziție pentru dark mode */
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navigatie */
+.navbar {
+  background-color: var(
+    --background-dark
+  ) !important; /* Force dark background */
+  padding: 1rem 0;
+  margin-bottom: 2rem; /* Adăugăm spațiu sub navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Umbră subtilă */
+  transition: background-color 0.3s ease;
+}
+
+.navbar .nav-link {
+  color: #ffffff !important; /* Text alb pentru link-urile din navbar */
+  font-family: "JetBrainsMono-Bold", monospace;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  color: var(--primary-color) !important; /* Culoare la hover/activ */
+}
+
+/* Dropdown specific Dark Mode */
+.dropdown-menu {
+  background-color: var(--dropdown-bg) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.dropdown-item {
+  color: var(--dropdown-text) !important;
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: var(--dropdown-hover-bg) !important;
+  color: var(--dropdown-hover-text) !important;
+}
+
+/* Titluri */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "JetBrainsMono-Bold", monospace;
+  color: var(--text-color);
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  transition: color 0.3s ease;
 }
 
 h1 {
-    font-family: 'JetBrainsMono-Bold';
-    padding-top: 1rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+  transition: color 0.3s ease, border-color 0.3s ease;
 }
 
+h2 {
+  font-size: 2rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  transition: border-color 0.3s ease;
+}
 
+h3 {
+  font-size: 1.75rem;
+  margin-top: 1.5rem;
+}
 
-ul li {
-    margin-bottom: 1rem;
+/* Paragrafe și Liste */
+p {
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+ul,
+ol {
+  margin-bottom: 1rem;
+  padding-left: 20px;
+}
+
+ul li,
+ol li {
+  margin-bottom: 0.5rem;
 }
 
 a {
-    text-decoration: none;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
+a:hover {
+  color: #0056b3; /* Nuanță mai închisă la hover */
+  text-decoration: underline;
+}
 
+/* Carduri (pentru lista de tutoriale) */
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out,
+    background-color 0.3s ease, border-color 0.3s ease;
+  background-color: var(--card-bg);
+}
 
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-family: "JetBrainsMono-Bold", monospace;
+  transition: color 0.3s ease;
+}
+
+.card-text {
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  font-family: "JetBrainsMono-Regular", monospace;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+/* Blocuri de cod */
+pre {
+  background-color: var(--code-bg);
+  color: var(--code-text);
+  padding: 15px;
+  border-radius: 5px;
+  overflow-x: auto; /* Permite scroll orizontal pentru cod lung */
+  font-family: "JetBrainsMono-Regular", monospace;
+  font-size: 0.9em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+code {
+  font-family: "JetBrainsMono-Regular", monospace;
+  color: var(--code-text);
+}
+
+/* Carduri de cod (pentru exemple) */
+.card-header.bg-dark {
+  background-color: var(--background-dark) !important;
+  color: #ffffff !important;
+  font-family: "JetBrainsMono-Bold", monospace;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-body.bg-light {
+  background-color: var(
+    --card-bg
+  ) !important; /* Fundal alb pentru body-ul cardului de cod */
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 3rem;
+  background-color: var(--background-dark);
+  color: #ffffff;
+  font-size: 0.9em;
+  border-top: 1px solid var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.copy {
+  margin: 0;
+}
+
+/* Responsive adjustments for Bootstrap's navbar-toggler-icon */
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+@media (max-width: 991.98px) {
+  .navbar-collapse {
+    background-color: var(
+      --background-dark
+    ); /* Fundal pentru meniul colapsat */
+    padding: 1rem;
+  }
+  .navbar .nav-link {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* Dark Mode Toggle Switch */
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Push to the right */
+  padding-right: 1rem;
+}
+
+.dark-mode-toggle label {
+  color: #ffffff;
+  margin-right: 10px;
+  font-size: 0.9em;
+  font-family: "JetBrainsMono-Regular", monospace;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 20px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+/* Search bar styling */
+.search-container {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  margin-right: 1rem; /* Space between search and dark mode toggle */
+}
+
+.search-container input[type="text"] {
+  padding: 8px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  outline: none;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-family: "JetBrainsMono-Regular", monospace;
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.search-container input[type="text"]::placeholder {
+  color: var(--secondary-color);
+}

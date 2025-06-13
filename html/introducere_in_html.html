@@ -1,131 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programare Pentru Toți</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Highlight.js CSS pentru evidențierea sintaxei -->
-    <link href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css" type="text/css">
-</head>
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+  </head>
+  <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">
-              <li class="nav-item mb-0">
-                <a class="nav-link active" aria-current="page" href="../index.html">Acasă</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Listă Tutoriale
-                </a>
-                <ul class="dropdown-menu">
-                  <li><p class="dropdown-item fw-bold">Tutoriale Front-end</p></li>
-                  <li><a class="dropdown-item" href="../html/html_index.html">HTML5</a></li>
-                </ul>
-              </li>
-            </ul>
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mb-0">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Acasă</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                HTML5
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="introducere_in_html.html"
+                    >Introducere în HTML5</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="anatomia_tagurilor.html"
+                    >Anatomia Tag-urilor HTML</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="html_index.html"
+                    >Toate Tutorialele HTML</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Caută tutoriale..."
+            />
+          </div>
+
+          <div class="dark-mode-toggle">
+            <label for="darkModeToggle">Dark Mode</label>
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" />
+              <span class="slider round"></span>
+            </label>
           </div>
         </div>
-      </nav>
-    <div class="container pb-3">
-        <h1 class="mt-3">Introducere în HTML5</h1>
-        <hr>
-        <p><strong>HTML5</strong> (HyperText Markup Language, versiunea 5) este cea mai recentă versiune a limbajului standard utilizat pentru structurarea și prezentarea conținutului pe web. 
-            Este fundamentul oricărei pagini web și reprezintă scheletul pe care se bazează toate tehnologiile web moderne.</p>
-        <h3 class="mt-3">De ce este necesar HTML5?</h3>
-           <p>HTML5 aduce îmbunătățiri semnificative față de versiunile anterioare, răspunzând nevoilor actuale ale web-ului modern:</p>
-            <ul class="mb-4">
-                <li><strong>Structură semantică îmbunătățită</strong>: Include elemente precum <strong>&lt;header&gt;</strong>, <strong>&lt;footer&gt;</strong>, <strong>&lt;article&gt;</strong>, și <strong>&lt;section&gt;</strong> care fac 
-                    structura paginii mai clară și mai ușor de înțeles atât pentru dezvoltatori, cât și pentru motoarele de căutare.
-                </li>
-                <li><strong>Suport multimedia nativ</strong>: Permite includerea directă a fișierelor audio și video prin elementele <strong>&lt;audio&gt;</strong> și <strong>&lt;video&gt;</strong>, eliminând necesitatea pluginurilor externe.
-                </li>
-                <li><strong>Funcționalități interactive</strong>:  HTML5 lucrează perfect cu CSS și JavaScript pentru a crea aplicații web interactive.</li>
-                <li><strong>Suport pentru aplicații web mobile</strong>: Include funcționalități optimizate pentru dispozitive mobile, cum ar fi geolocalizarea, stocarea locală și suportul pentru ecrane tactile.
-                </li>
-                <li>
-                    <strong>Performanță îmbunătățită</strong>:  Codul HTML5 este mai curat, mai eficient și mai ușor de interpretat de către browsere.
-                </li>
-            </ul>
-            <hr>
-        <h3 class="mt-4">Cum să creezi un fișier HTML5?</h3>
-            <ul>
-                <li>
-                    <strong>Structura de bază a unui fișier HTML5</strong>: Fiecare fișier HTML începe cu un doctype care indică utilizarea HTML5. Structura de bază a unui fișier HTML5 este următoarea:
-                </li>
-            </ul>
-<div class="container mt-5 pb-4">
-    <h4 class="mb-4">Exemplu de Cod HTML5</h4>
-                    
-        <div class="card shadow-sm">
-            <div class="card-header bg-dark text-white">
-            <strong>Cod HTML5</strong>
-            </div>
-<div class="card-body bg-light">
-    <pre>
-        <code>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Introducere în HTML5</h1>
+      <p>
+        HTML5 (HyperText Markup Language 5) este a cincea și cea mai recentă
+        versiune a limbajului standard pentru crearea de pagini web. Este
+        coloana vertebrală a oricărui site web, definind structura și conținutul
+        paginilor.
+      </p>
+
+      <h2>Ce este HTML5?</h2>
+      <p>
+        HTML5 nu este un limbaj de programare, ci un limbaj de marcare. Asta
+        înseamnă că utilizează "tag-uri" pentru a defini elemente precum
+        titluri, paragrafe, imagini, link-uri și multe altele.
+      </p>
+      <ul>
+        <li>HTML5 este standardul actual pentru dezvoltarea web.</li>
+        <li>Conținutul paginii este definit de tag-uri HTML.</li>
+        <li>Este interpretat de browsere web pentru a afișa paginile.</li>
+      </ul>
+
+      <h2>Structura de bază a unui document HTML5</h2>
+      <p>Fiecare document HTML5 are o structură standard:</p>
+      <div class="card shadow-sm mt-3 mb-3">
+        <div class="card-header bg-dark text-white">
+          <strong>Cod HTML5</strong>
+        </div>
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-html">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="ro"&gt;
-&lt;head>
+&lt;head&gt;
     &lt;meta charset="UTF-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Exemplu HTML5&lt;/title&gt;
+    &lt;title&gt;Titlul Paginii&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-    &lt;header&gt;
-        &lt;h1>Bun venit în lumea HTML5!&lt;/h1&gt;
-    &lt;/header&gt;
-    &lt;section&gt;
-        &lt;article&gt;
-            &lt;h2&gt;Ce este HTML5?&lt;/h2&gt;
-            &lt;p&gt;HTML5 este limbajul standard pentru crearea paginilor web moderne.&lt;/p&gt;
-        &lt;/article&gt;
-    &lt;/section&gt;
-    &lt;footer&gt;
-        &lt;p&gt;&copy; 2024 Daniel Savescu&lt;/p&gt;
-    &lt;/footer&gt;
+    &lt;!-- Conținutul vizibil al paginii tale --&gt;
+    &lt;h1&gt;Bun venit pe pagina mea!&lt;/h1&gt;
+    &lt;p&gt;Acesta este un paragraf.&lt;/p&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-</code></pre>
-</div>
-    </div>
-</div>
-            
+</code>
+</pre>
+        </div>
+      </div>
 
-    
-    <ul>
+      <h3>Explicația elementelor cheie:</h3>
+      <ul>
         <li>
-            <strong>Explicația structurii:</strong>
-                <ul>
-                    <li class="mt-4 pb-2"><strong>&lt;!DOCTYPE html&gt;</strong>: Indică faptul că se folosește HTML5.</li>
-                    <li class="mt-4 pb-2"><strong>&lt;html lang="ro"&gt;</strong>: Marchează începutul documentului HTML și specifică limba (română).</li>
-                    <li class="mt-4 pb-2"><strong>&lt;head&gt;</strong>: Conține metadatele documentului (titlu, setul de caractere, viewport pentru responsive).</li>
-                    <li class="mt-4 pb-2"><strong>&lt;body&gt;</strong>: Conține conținutul vizibil al paginii.</li>
-                    <li class="mt-4 pb-2"><strong>&lt;header&gt;</strong>, <strong>&lt;section&gt;</strong>, <strong>&lt;article&gt;</strong>, <strong>&lt;footer&gt;</strong>: Conține conținutul vizibil al paginii.</li>
-                </ul>
+          <strong><code>&lt;!DOCTYPE html&gt;</code></strong
+          >: Declară tipul de document, asigurând că browserul randează pagina
+          în modul standard HTML5.
         </li>
-    </ul>
-    <hr>
-    <h3 class="mt-4 mb-4">Cum să creezi un fișier HTML5?</h3>
-        <ol>
-            <li>Salvează fișierul cu extensia <strong>.html</strong>, de exemplu, <strong>pagina.html</strong></li>
-            <li>Deschide fișierul într-un browser (de exemplu, Chrome, Firefox sau Edge).</li>
-            <li>Vei vedea pagina structurată conform codului scris.</li>
-        </ol>
-    <p>Aceasta este baza pentru orice proiect web. De aici poți începe să adaugi stiluri (CSS) și funcționalități interactive 
-        (JavaScript) pentru a crea aplicații web complexe!</p>
-</div>
-     <!-- Bootstrap JS -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-     <!-- Highlight.js JS pentru evidențierea sintaxei -->
-     <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/lib/core.min.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/lib/languages/xml.min.js"></script>
-</body>
-</html> 
+        <li>
+          <strong><code>&lt;html lang="ro"&gt;</code></strong
+          >: Elementul rădăcină al paginii, specificând limba documentului
+          (română, în acest caz).
+        </li>
+        <li>
+          <strong><code>&lt;head&gt;</code></strong
+          >: Conține metadatele documentului, invizibile pentru utilizator, cum
+          ar fi:
+          <ul>
+            <li>
+              <strong><code>&lt;meta charset="UTF-8"&gt;</code></strong
+              >: Definește setul de caractere, esențial pentru afișarea corectă
+              a caracterelor speciale.
+            </li>
+            <li>
+              <strong
+                ><code
+                  >&lt;meta name="viewport" content="width=device-width,
+                  initial-scale=1.0"&gt;</code
+                ></strong
+              >: Asigură responsive design pe diferite dispozitive.
+            </li>
+            <li>
+              <strong><code>&lt;title&gt;</code></strong
+              >: Definește titlul paginii, afișat în tab-ul browserului.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong><code>&lt;body&gt;</code></strong
+          >: Conține tot conținutul vizibil al paginii: texte, imagini,
+          link-uri, etc.
+          <ul>
+            <li>
+              <strong><code>&lt;header&gt;</code></strong
+              >, <strong><code>&lt;section&gt;</code></strong
+              >, <strong><code>&lt;article&gt;</code></strong
+              >, <strong><code>&lt;footer&gt;</code></strong
+              >: Elemente semantice noi în HTML5 care ajută la structurarea
+              conținutului.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <hr />
+      <h3>Cum să creezi un fișier HTML5?</h3>
+      <ol>
+        <li>
+          Salvează fișierul cu extensia <strong>.html</strong>, de exemplu,
+          <strong>pagina.html</strong>
+        </li>
+        <li>
+          Deschide fișierul într-un browser (de exemplu, Chrome, Firefox sau
+          Edge).
+        </li>
+        <li>Vei vedea pagina structurată conform codului scris.</li>
+      </ol>
+      <p>
+        Aceasta este baza pentru orice proiect web. De aici poți începe să
+        adaugi stiluri (CSS) și funcționalități interactive (JavaScript) pentru
+        a crea aplicații web complexe!
+      </p>
+    </div>
+    <footer>
+      <p class="copy">Creat de om, generat de AI</p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script>
+      // Dark Mode Functionality (repeated for consistency across pages)
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        darkModeToggle.checked = true;
+      }
+
+      darkModeToggle.addEventListener("change", () => {
+        if (darkModeToggle.checked) {
+          body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        } else {
+          body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // Placeholder for search input on individual tutorial pages
+      // This input won't filter anything on these pages, but exists for consistent UI
+      document
+        .getElementById("searchInput")
+        .addEventListener("keyup", function () {
+          // No action needed here, as search filtering is for html_index.html
+        });
+    </script>
+  </body>
+</html>
