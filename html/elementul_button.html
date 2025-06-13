@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programare Pentru Toți</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mb-0">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Acasă</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                HTML5
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="introducere_in_html.html"
+                    >Introducere în HTML5</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="anatomia_tagurilor.html"
+                    >Anatomia Tag-urilor HTML</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="html_index.html"
+                    >Toate Tutorialele HTML</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Caută tutoriale..."
+            />
+          </div>
+
+          <div class="dark-mode-toggle">
+            <label for="darkModeToggle">Dark Mode</label>
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>Elementul `&lt;button&gt;` din HTML5</h1>
+      <p>
+        Elementul `&lt;button&gt;` este utilizat pentru a crea un buton
+        clicabil. Butoanele sunt elemente interactive esențiale care permit
+        utilizatorilor să declanșeze acțiuni, să trimită formulare sau să
+        interacționeze cu elemente JavaScript.
+      </p>
+
+      <h2>Sintaxă și Atribute Cheie</h2>
+      <p>Sintaxa de bază a elementului `&lt;button&gt;`:</p>
+      <div class="card shadow-sm mt-3 mb-3">
+        <div class="card-header bg-dark text-white">
+          <strong>Cod HTML5</strong>
+        </div>
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-html">
+&lt;button&gt;Textul Butonului&lt;/button&gt;
+</code>
+</pre>
+        </div>
+      </div>
+
+      <h5 class="fw-bold">Atribute importante:</h5>
+      <ul>
+        <li class="pt-3">
+          <strong>`type`</strong>: Specifică comportamentul butonului. Valori
+          comune:
+          <ul>
+            <li>`submit` (implicit): Trimite datele unui formular.</li>
+            <li>
+              `reset`: Resetează toate valorile unui formular la starea lor
+              inițială.
+            </li>
+            <li>
+              `button`: Un buton generic care nu are un comportament implicit.
+              Ideal pentru a declanșa funcții JavaScript.
+            </li>
+          </ul>
+          <div class="card shadow-sm mt-3 mb-3">
+            <div class="card-header bg-dark text-white">
+              <strong>Cod HTML5</strong>
+            </div>
+            <div class="card-body bg-light">
+              <pre>
+<code class="language-html">
+&lt;button type="submit"&gt;Trimite&lt;/button&gt;
+&lt;button type="button" onclick="alert('Salut!')"&gt;Click Me&lt;/button&gt;
+</code>
+</pre>
+            </div>
+          </div>
+        </li>
+        <li>
+          <strong>`name`</strong>: Numele butonului, folosit atunci când butonul
+          este parte a unui formular și datele sunt trimise.
+        </li>
+        <li>
+          <strong>`value`</strong>: Valoarea asociată butonului, trimisă
+          împreună cu `name` atunci când formularul este trimis.
+        </li>
+        <li>
+          <strong>`disabled`</strong>: Un atribut boolean care, atunci când este
+          prezent, dezactivează butonul, făcându-l necicabil.
+          <div class="card shadow-sm mt-3 mb-3">
+            <div class="card-header bg-dark text-white">
+              <strong>Cod HTML5</strong>
+            </div>
+            <div class="card-body bg-light">
+              <pre>
+<code class="language-html">
+&lt;button type="submit" disabled&gt;Trimite (Dezactivat)&lt;/button&gt;
+</code>
+</pre>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <hr />
+
+      <h2>
+        Diferența dintre `&lt;button&gt;` și `&lt;input type="button"&gt;`
+      </h2>
+      <p>Deși ambele creează butoane, există o diferență importantă:</p>
+      <ul>
+        <li class="pt-3">
+          <strong>`&lt;button&gt;`</strong>: Permite un conținut HTML bogat
+          (text, imagini, alte elemente inline). Textul butonului este plasat
+          între tag-urile de deschidere și închidere. Este preferat pentru
+          flexibilitate în stilizare.
+        </li>
+        <li>
+          <strong>`&lt;input type="button"&gt;`</strong>: Este un element
+          self-closing, iar textul butonului este specificat prin atributul
+          `value`. Nu poate conține alte elemente HTML.
+        </li>
+      </ul>
+      <div class="card shadow-sm mt-3 mb-3">
+        <div class="card-header bg-dark text-white">
+          <strong>Cod HTML5</strong>
+        </div>
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-html">
+&lt;button&gt;
+    &lt;img src="icon.png" alt="Iconiță" style="width:20px;"&gt;
+    Trimite
+&lt;/button&gt;
+
+&lt;input type="button" value="Trimite"&gt;
+</code>
+</pre>
+        </div>
+      </div>
+
+      <h2>Stilizarea Butoanelor cu CSS</h2>
+      <p>
+        Butoanele sunt adesea stilizate pentru a se potrivi cu designul
+        site-ului.
+      </p>
+      <div class="card shadow-sm mt-3 mb-3">
+        <div class="card-header bg-dark text-white">
+          <strong>Cod CSS3</strong>
+        </div>
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-css">
+/* CSS */
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+</code>
+</pre>
+        </div>
+      </div>
+      <p class="mt-3">
+        Elementul `&lt;button&gt;` este fundamental pentru interacțiunea
+        utilizatorului și oferă flexibilitate în design și funcționalitate.
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script>
+      // Dark Mode Functionality
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        darkModeToggle.checked = true;
+      }
+
+      darkModeToggle.addEventListener("change", () => {
+        if (darkModeToggle.checked) {
+          body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        } else {
+          body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // Placeholder for search input on individual tutorial pages
+      document
+        .getElementById("searchInput")
+        .addEventListener("keyup", function () {
+          // No action needed here, as search filtering is for html_index.html
+        });
+    </script>
+  </body>
+</html>

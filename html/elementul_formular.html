@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Programare Pentru Toți</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/styles/default.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/style.css" type="text/css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mb-0">
+              <a class="nav-link" aria-current="page" href="../index.html"
+                >Acasă</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link active dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                HTML5
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="introducere_in_html.html"
+                    >Introducere în HTML5</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="anatomia_tagurilor.html"
+                    >Anatomia Tag-urilor HTML</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="html_index.html"
+                    >Toate Tutorialele HTML</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="search-container">
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Caută tutoriale..."
+            />
+          </div>
+
+          <div class="dark-mode-toggle">
+            <label for="darkModeToggle">Dark Mode</label>
+            <label class="switch">
+              <input type="checkbox" id="darkModeToggle" />
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <h1>
+        Elementele `&lt;form&gt;`, `&lt;input&gt;` și `&lt;label&gt;` din HTML5
+      </h1>
+      <p>
+        Formularele HTML sunt utilizate pentru a colecta date de la utilizatori
+        (ex. nume, adrese de email, mesaje) și a le trimite către un server.
+        Elementele de bază pentru construirea unui formular includ
+        `&lt;form&gt;` (containerul formularului), `&lt;input&gt;` (câmpuri de
+        intrare) și `&lt;label&gt;` (etichete pentru câmpuri).
+      </p>
+
+      <h2>Elementul `&lt;form&gt;`</h2>
+      <p>
+        Elementul `&lt;form&gt;` definește un formular HTML, utilizat pentru
+        colectarea datelor de intrare ale utilizatorului.
+      </p>
+      <h5 class="fw-bold">Atribute cheie pentru `&lt;form&gt;`:</h5>
+      <ul>
+        <li class="pt-3">
+          <strong>`action`</strong>: Specifică URL-ul unde vor fi trimise datele
+          formularului la submisie.
+        </li>
+        <li>
+          <strong>`method`</strong>: Definește metoda HTTP folosită pentru a
+          trimite datele (`GET` sau `POST`).
+          <ul>
+            <li>
+              `GET`: Datele sunt adăugate la URL ca parametri de interogare
+              (vizibile, limită de lungime). Ideal pentru căutări sau date
+              non-sensibile.
+            </li>
+            <li>
+              `POST`: Datele sunt trimise în corpul cererii HTTP (invizibile în
+              URL, fără limită de lungime). Ideal pentru date sensibile (parole)
+              sau volume mari de date.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="card shadow-sm mt-3 mb-3">
+        <div class="card-header bg-dark text-white">
+          <strong>Cod HTML5</strong>
+        </div>
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-html">
+&lt;form action="/submit-form" method="POST"&gt;
+    &lt;!-- Elemente de intrare aici --&gt;
+&lt;/form&gt;
+</code>
+</pre>
+        </div>
+      </div>
+
+      <h2>Elementul `&lt;input&gt;`</h2>
+      <p>
+        Elementul `&lt;input&gt;` este cel mai versatil element de formular,
+        utilizat pentru a crea diverse controale de intrare de date. Este un
+        element self-closing.
+      </p>
+      <h5 class="fw-bold">Atribute cheie pentru `&lt;input&gt;`:</h5>
+      <ul>
+        <li class="pt-3">
+          <strong>`type`</strong>: Definește tipul controlului de intrare (ex.
+          `text`, `password`, `email`, `number`, `checkbox`, `radio`, `submit`,
+          `date`).
+        </li>
+        <li>
+          <strong>`name`</strong>: Numele câmpului, folosit pentru a identifica
+          datele la trimiterea formularului către server.
+        </li>
+        <li>
+          <strong>`value`</strong>: Valoarea inițială a câmpului sau valoarea
+          trimisă pentru anumite tipuri (ex. butoane radio/checkbox).
+        </li>
+        <li>
+          <strong>`id`</strong>: Un identificator unic pentru câmp, utilizat
+          frecvent împreună cu `&lt;label&gt;`.
+        </li>
+        <li>
+          <strong>`placeholder`</strong>: Text sugestiv afișat în câmp înainte
+          ca utilizatorul să introducă date.
+        </li>
+        <li>
+          <strong>`required`</strong>: Un atribut boolean care specifică dacă
+          câmpul trebuie completat înainte de submisie.
+        </li>
+      </ul>
+      <div class="card shadow-sm mt-3 mb-3">
+        <div class="card-header bg-dark text-white">
+          <strong>Cod HTML5</strong>
+        </div>
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-html">
+&lt;input type="text" id="nume" name="nume" placeholder="Numele tău" required&gt;
+&lt;input type="email" id="email" name="email"&gt;
+&lt;input type="password" id="parola" name="parola"&gt;
+&lt;input type="checkbox" id="acord" name="acord" value="da"&gt;
+&lt;input type="submit" value="Trimite Formularul"&gt;
+</code>
+</pre>
+        </div>
+      </div>
+
+      <h2>Elementul `&lt;label&gt;`</h2>
+      <p>
+        Elementul `&lt;label&gt;` definește o etichetă pentru un element de
+        intrare, îmbunătățind accesibilitatea. Atunci când utilizatorul dă click
+        pe etichetă, focusul se mută pe elementul de intrare asociat.
+      </p>
+      <h5 class="fw-bold">Atribut cheie pentru `&lt;label&gt;`:</h5>
+      <ul>
+        <li class="pt-3">
+          <strong>`for`</strong>: Valoarea atributului `for` din `&lt;label&gt;`
+          trebuie să fie identică cu valoarea atributului `id` al elementului
+          `&lt;input&gt;` pe care îl etichetează. Aceasta creează legătura
+          semantică.
+        </li>
+      </ul>
+      <div class="card shadow-sm mt-3 mb-3">
+        <div class="card-header bg-dark text-white">
+          <strong>Cod HTML5</strong>
+        </div>
+        <div class="card-body bg-light">
+          <pre>
+<code class="language-html">
+&lt;form action="/submit-contact" method="POST"&gt;
+    &lt;label for="numeUtilizator"&gt;Nume:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="numeUtilizator" name="numeUtilizator" required&gt;&lt;br&gt;&lt;br&gt;
+    
+    &lt;label for="mesaj"&gt;Mesajul tău:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="mesaj" name="mesaj" rows="4" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;input type="submit" value="Trimite"&gt;
+&lt;/form&gt;
+</code>
+</pre>
+        </div>
+      </div>
+
+      <h5 class="fw-bold">Considerații importante:</h5>
+      <ul>
+        <li class="pt-3">
+          <strong>Accesibilitate:</strong> Utilizarea corectă a `&lt;label&gt;`
+          cu atributul `for` este vitală pentru accesibilitate, ajutând
+          utilizatorii de cititoare de ecran.
+        </li>
+        <li>
+          <strong>Validare:</strong> HTML5 oferă validare încorporată
+          (`required`, `pattern`, `min`, `max`, `type="email"` etc.), dar
+          validarea pe server este întotdeauna necesară pentru securitate.
+        </li>
+        <li>
+          <strong>Stilizare:</strong> Formularele pot fi stilizate extensiv cu
+          CSS pentru a arăta atractiv și a fi ușor de utilizat.
+        </li>
+      </ul>
+      <p class="mt-3">
+        Formularele sunt o componentă cheie a interacțiunii utilizator-web, iar
+        înțelegerea acestor elemente de bază este esențială pentru colectarea
+        eficientă a datelor.
+      </p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/highlight.js@11.8.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <script>
+      // Dark Mode Functionality
+      const darkModeToggle = document.getElementById("darkModeToggle");
+      const body = document.body;
+
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        body.classList.add("dark-mode");
+        darkModeToggle.checked = true;
+      }
+
+      darkModeToggle.addEventListener("change", () => {
+        if (darkModeToggle.checked) {
+          body.classList.add("dark-mode");
+          localStorage.setItem("theme", "dark");
+        } else {
+          body.classList.remove("dark-mode");
+          localStorage.setItem("theme", "light");
+        }
+      });
+
+      // Placeholder for search input on individual tutorial pages
+      document
+        .getElementById("searchInput")
+        .addEventListener("keyup", function () {
+          // No action needed here, as search filtering is for html_index.html
+        });
+    </script>
+  </body>
+</html>
